@@ -76,6 +76,7 @@ if (ingresar) {
             "No puedes adoptar un pez, primero tienes que comprar una pecera!"
           );
           seguirAdoptando();
+          break;
         } else {
           alert("No ingresaste una opción válida.");
           seguirAdoptando();
@@ -112,6 +113,7 @@ if (ingresar) {
             "No puedes adoptar un pájaro, primero tienes que comprar una jaula!"
           );
           seguirAdoptando();
+          break;
         } else {
           alert("No ingresaste una opción válida.");
           seguirAdoptando();
@@ -152,28 +154,38 @@ if (ingresar) {
   function seguirAdoptando() {
     let respuestaSeguir = prompt("Quieres seguir adoptando?");
 
-    switch (respuestaSeguir.toLowerCase()) {
-      case "si":
-        menuPrincipal();
+    if (respuestaSeguir.toLowerCase() === "si") {
+      menuPrincipal();
+    } else if (respuestaSeguir.toLowerCase() === "no") {
+      alert("Has cerrado sesión!");
+    } else {
+      while (
+        respuestaSeguir.toLowerCase !== "si" &&
+        respuestaSeguir.toLowerCase !== "no"
+      ) {
+        seguirAdoptando();
         break;
-      case "no":
-        alert("¡Gracias por adoptar responsablemente!");
-        break;
-      default:
-        respuestaSeguir = prompt("Quieres seguir adoptando?");
-        break;
+      }
     }
-
-    // Otra forma de hacer la funcion que no funcionó, pero no la quise borrar
-
-    // if (respuestaSeguir.toLowerCase() === "si") {
-    //   menuPrincipal();
-    // } else if (respuestaSeguir.toLowerCase() === "no") {
-    //   alert("Has cerrado sesión!");
-    // } else {
-    //   respuestaSeguir = prompt("Quieres seguir adoptando?");
-    // }
   }
 }
 
 alert("Adiós");
+
+// switch (respuestaSeguir.toLowerCase()) {
+//   case "si":
+//     menuPrincipal();
+//     break;
+//   case "no":
+//     alert("¡Gracias por adoptar responsablemente!");
+//     break;
+//   default:
+//     respuestaSeguir = prompt("Quieres seguir adoptando?");
+//     break;
+// }
+
+// Otra forma de hacer la funcion que no funcionó, pero no la quise borrar
+
+// } else {
+//   respuestaSeguir = prompt("Quieres seguir adoptando?");
+// }
