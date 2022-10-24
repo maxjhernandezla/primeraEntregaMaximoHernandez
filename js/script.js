@@ -75,10 +75,10 @@ if (ingresar) {
           alert(
             "No puedes adoptar un pez, primero tienes que comprar una pecera!"
           );
+          seguirAdoptando();
         } else {
           alert("No ingresaste una opción válida.");
           seguirAdoptando();
-          break;
         }
         const pez = prompt(
           "Puedes adoptar: \n1- Goldfish \n2- Angel \n3- Payaso"
@@ -107,14 +107,14 @@ if (ingresar) {
         preguntaPajaro.toLowerCase();
         if (preguntaPajaro.toLowerCase() === "si") {
           alert("Felicidades, puedes adoptar un pajarito!");
-        } else if (preguntaPez.toLowerCase() === "no") {
+        } else if (preguntaPajaro.toLowerCase() === "no") {
           alert(
             "No puedes adoptar un pájaro, primero tienes que comprar una jaula!"
           );
+          seguirAdoptando();
         } else {
           alert("No ingresaste una opción válida.");
           seguirAdoptando();
-          break;
         }
         const pajaro = prompt(
           "Puedes adoptar: \n1- Cotorra \n2- Loro \n3- Tucán"
@@ -125,7 +125,7 @@ if (ingresar) {
             seguirAdoptando();
             break;
           case "2":
-            alert("Felicidades, adoptaste un loro");
+            alert("Felicidades, adoptaste un loro!");
             seguirAdoptando();
             break;
           case "3":
