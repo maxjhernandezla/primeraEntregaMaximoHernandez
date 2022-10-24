@@ -109,7 +109,7 @@ if (ingresar) {
           alert("Felicidades, puedes adoptar un pajarito!");
         } else if (preguntaPez.toLowerCase() === "no") {
           alert(
-            "No puedes adoptar un pez, primero tienes que comprar una jaula!"
+            "No puedes adoptar un pájaro, primero tienes que comprar una jaula!"
           );
         } else {
           alert("No ingresaste una opción válida.");
