@@ -29,7 +29,7 @@ if (ingresar) {
     let respuestaMenu = prompt(
       "Bienvenido/a " +
         usuario +
-        " que tipo de mascota quieres adoptar hoy? \n1- Animales \n2- Peces \n3- ájaros \n4- Cerrar sesión."
+        " que tipo de mascota quieres adoptar hoy? \n1- Animales \n2- Peces \n3- Pájaros \n4- Cerrar sesión."
     );
 
     switch (respuestaMenu) {
@@ -159,6 +159,9 @@ if (ingresar) {
         respuestaSeguir = prompt("Quieres seguir adoptando?");
         break;
     }
+
+    // Otra forma de hacer la funcion que no funcionó, pero no la quise borrar
+
     // if (respuestaSeguir.toLowerCase() === "si") {
     //   menuPrincipal();
     // } else if (respuestaSeguir.toLowerCase() === "no") {
