@@ -71,10 +71,12 @@ if (ingresar) {
         preguntaPez.toLowerCase();
         if (preguntaPez.toLowerCase() === "si") {
           alert("Felicidades, puedes adoptar un pez!");
-        } else {
+        } else if (preguntaPez.toLowerCase() === "no") {
           alert(
             "No puedes adoptar un pez, primero tienes que comprar una pecera!"
           );
+        } else {
+          alert("No ingresaste una opción válida.");
           seguirAdoptando();
           break;
         }
@@ -105,10 +107,12 @@ if (ingresar) {
         preguntaPajaro.toLowerCase();
         if (preguntaPajaro.toLowerCase() === "si") {
           alert("Felicidades, puedes adoptar un pajarito!");
-        } else {
+        } else if (preguntaPez.toLowerCase() === "no") {
           alert(
             "No puedes adoptar un pez, primero tienes que comprar una jaula!"
           );
+        } else {
+          alert("No ingresaste una opción válida.");
           seguirAdoptando();
           break;
         }
